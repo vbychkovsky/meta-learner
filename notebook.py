@@ -7,6 +7,10 @@ import ml
 if __name__ == "__main__":
 
     class MyClass:
+        # Uncommenting the following should break things, as we'll be trying to 'dill'
+        # self.model, which is a RandomForestClassifier
+        #def __init__(self):
+        #    self.mycrazymodel = self.trainModel()
 
         def trainModel(self):
             from sklearn.ensemble import RandomForestClassifier
